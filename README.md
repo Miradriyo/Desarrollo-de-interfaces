@@ -29,3 +29,10 @@ en el documento la equivalencia en libras.
        * Calcular el resto de la división entre 2.
    * Si no cumple la condición:
      * Mostrar un mensaje de error.
+
+### Ejercicio 4: Javascript III
+* **Enunciado:** Se pregunta por pantalla: ¿Deseas jugar con Javascript?
+    * NO----Mostramos un mensaje: Tu te lo pierdes!!!. (imagen)
+    * SI
+        * Elige un destino: ¿Francia, España, Portugal?
+        *  Si elige Francia: Preguntamos: ¿París, Marsella o Lyon
