@@ -35,4 +35,24 @@ en el documento la equivalencia en libras.
     * NO----Mostramos un mensaje: Tu te lo pierdes!!!. (imagen)
     * SI
         * Elige un destino: ¿Francia, España, Portugal?
-        *  Si elige Francia: Preguntamos: ¿París, Marsella o Lyon
+        *  Si elige Francia: Preguntamos: ¿París, Marsella o Lyon?
+            * París
+                * Aparece un párrafo (loremp)
+                * 3 imágenes de París 
+            * Marsella
+                * Aparece un párrafo (loremp)
+                * 3 imágenes de Marsella 
+            * Lyon
+                * Aparece un párrafo (loremp)
+                * 3 imágenes de Lyon
+        * Si elige España preguntamos: ¿Playa o montaña?
+            * Playa
+                  * Aparece un párrafo (lorem)
+                  * 3 fotos
+            * Montaña
+                  * Aparece un párrafo
+                  * 2 fotos              
+        * Si elige Portugal preguntamos ¿turismo, playa o montaña?
+            * Turismo :Texto y una foto
+            * Playa: Algarbe (texto y 2 fotos)
+            * Montaña: Fotos de Nazaret y Santuario de Fátima
