@@ -33,22 +33,9 @@ Este repositorio contiene los ejercicios realizados en clase. Cada carpeta repre
 
 ### 🔸 Ejercicio 4: Javascript III | Switch - Juego de Viajes
 **Estructura del juego:**
-🎮 ¿Deseas jugar con Javascript?
-├── NO ➜ Mensaje + imagen
-└── SI ➜ Elige destino
-├── 🇫🇷 FRANCIA
-│   ├── París    ➜ Texto + 3 imágenes
-│   ├── Marsella ➜ Texto + 3 imágenes
-│   └── Lyon     ➜ Texto + 3 imágenes
-│
-├── 🇪🇸 ESPAÑA
-│   ├── Playa   ➜ Texto + 3 imágenes
-│   └── Montaña ➜ Texto + 2 imágenes
-│
-└── 🇵🇹 PORTUGAL
-├── Turismo  ➜ Texto + 1 imagen
-├── Playa    ➜ Algarve: texto + 2 imágenes
-└── Montaña  ➜ Nazaret y Santuario de Fátima
+
+   ![Captura de pantalla 2024-12-30 154619](https://github.com/user-attachments/assets/55eb6f99-50ac-4bb1-a059-4d08751de9bb)
+
 
 ### 🔸 Ejercicio 5: Javascript III | Bucles
 **Implementación con los tres tipos de bucles:**
