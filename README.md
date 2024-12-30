@@ -1,58 +1,65 @@
-# Ejercicios de Clase
+# 📚 Ejercicios de Clase
 
-**Introducción**
-
+## 🎯 Introducción
 Este repositorio contiene los ejercicios realizados en clase. Cada carpeta representa un ejercicio y contiene los archivos necesarios para su ejecución.
 
-## Ejercicios
+## 💻 Ejercicios
 
-### Ejercicio 1: Javascript
-* **Enunciado:** Se pide por pantalla mediante una ventana de tipo prompt, el importe en Euros. Se imprime
-en el documento la equivalencia en libras.
-1euro---0,87libras
+### 🔸 Ejercicio 1: Javascript | Conversor de Moneda
+**Descripción:** Desarrollo de un conversor de divisas simple
+* **Objetivo:** Crear una ventana prompt que solicite euros y muestre su equivalencia en libras
+* **Tasa de conversión:** 1€ = 0.87£
 
-### Ejercicio 2: Javascript II
-* **Enunciado:** Realizar con el operadro not. Pedir un número por pantalla, y comporbar que es distinto de cero y mayor que cero
-    a. Si se cumple la condición, se calcula si el número es par o impar
-    b. Si no se cumple la condición, se muestra un mensaje de error
+### 🔸 Ejercicio 2: Javascript II | Operador NOT
+**Descripción:** Validación de números usando el operador NOT
+* **Proceso:**
+  * Solicitar número mediante prompt
+  * Validar que sea distinto y mayor que cero
+  * Determinar si es par o impar
+  * Mostrar mensaje de error si no cumple las condiciones
 
-### Ejercicio 3: Javascript II
-* **Enunciado:**
-1. **Solicitar número:**
-   * Pedir al usuario que ingrese un número entero por teclado.
-2. **Validar número:**
-   * Comprobar si el número es positivo y distinto de cero.
-   * Si cumple la condición:
-     * **Si tiene dos cifras:**
-       * Determinar si es par o impar.
-     * **Si tiene tres cifras:**
-       * Calcular el resto de la división entre 2.
-   * Si no cumple la condición:
-     * Mostrar un mensaje de error.
+### 🔸 Ejercicio 3: Javascript II | Análisis Numérico
+**Estructura del programa:**
 
-### Ejercicio 4: Javascript III
-* **Enunciado:** Se pregunta por pantalla: ¿Deseas jugar con Javascript?
-    * NO----Mostramos un mensaje: Tu te lo pierdes!!!. (imagen)
-    * SI
-        * Elige un destino: ¿Francia, España, Portugal?
-        *  Si elige Francia: Preguntamos: ¿París, Marsella o Lyon?
-            * París
-                * Aparece un párrafo (loremp)
-                * 3 imágenes de París 
-            * Marsella
-                * Aparece un párrafo (loremp)
-                * 3 imágenes de Marsella 
-            * Lyon
-                * Aparece un párrafo (loremp)
-                * 3 imágenes de Lyon
-        * Si elige España preguntamos: ¿Playa o montaña?
-            * Playa
-                  * Aparece un párrafo (lorem)
-                  * 3 fotos
-            * Montaña
-                  * Aparece un párrafo
-                  * 2 fotos              
-        * Si elige Portugal preguntamos ¿turismo, playa o montaña?
-            * Turismo :Texto y una foto
-            * Playa: Algarbe (texto y 2 fotos)
-            * Montaña: Fotos de Nazaret y Santuario de Fátima
+1. **📥 Entrada de datos:**
+   * Solicitar número entero por teclado
+
+2. **🔍 Validación:**
+   * Verificar número positivo y no cero
+   * Análisis según número de cifras:
+     * **Dos cifras:** Determinar paridad
+     * **Tres cifras:** Calcular resto de división entre 2
+   * Mostrar error si no cumple requisitos
+
+### 🔸 Ejercicio 4: Javascript III | Switch - Juego de Viajes
+**Estructura del juego:**
+🎮 ¿Deseas jugar con Javascript?
+├── NO ➜ Mensaje + imagen
+└── SI ➜ Elige destino
+├── 🇫🇷 FRANCIA
+│   ├── París    ➜ Texto + 3 imágenes
+│   ├── Marsella ➜ Texto + 3 imágenes
+│   └── Lyon     ➜ Texto + 3 imágenes
+│
+├── 🇪🇸 ESPAÑA
+│   ├── Playa   ➜ Texto + 3 imágenes
+│   └── Montaña ➜ Texto + 2 imágenes
+│
+└── 🇵🇹 PORTUGAL
+├── Turismo  ➜ Texto + 1 imagen
+├── Playa    ➜ Algarve: texto + 2 imágenes
+└── Montaña  ➜ Nazaret y Santuario de Fátima
+
+### 🔸 Ejercicio 5: Javascript III | Bucles
+**Implementación con los tres tipos de bucles:**
+
+1. **📝 Entrada personalizada**
+   * Solicitar nombre y número a imprimir
+
+2. **🔢 Secuencia numérica**
+   * Mostrar números 1-100
+   * Intervalos de 10 en 10
+
+3. **📊 Generador de tablas**
+   * Solicitar dimensiones (celdas y filas)
+   * Crear tabla según especificaciones
