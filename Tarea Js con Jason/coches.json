@@ -1,0 +1,50 @@
+[{
+    "marca": "Subaru",
+    "modelo": "Tribeca 3.6 Limited",
+    "kilometros": "100.745km",
+    "año": "Septiembre 2010",
+    "precio": "12.500€",
+    "motor": "Gasolina",
+    "foto":"img/subaru.jpg",
+    "disponible": "si"
+},
+{
+    "marca": "BMW",
+    "modelo": "320 CD Coupe",
+    "kilometros": "150.000km",
+    "año": "Enero 2008",
+    "precio": "8.500€",
+    "motor": "Diesel",
+    "foto":"img/bmw.jpg",
+    "disponible": "si"
+},
+{
+    "marca": "FIAT",
+    "modelo": "500 1.2 Lounge",
+    "kilometros": "39.000km",
+    "año": "Diciembre 2013",
+    "precio": "8.600€",
+    "motor": "Gasolina",
+    "foto":"img/fiat.jpg",
+    "disponible": "no"
+},
+{
+    "marca": "Opel",
+    "modelo": "Insignia 2.0 CDTI",
+    "kilometros": "211.582km",
+    "año": "Noviembre 2009",
+    "precio": "6711€",
+    "motor": "Diesel",
+    "foto":"img/opel.jpg",
+    "disponible": "si"
+},
+{
+    "marca":"Peugeot",
+    "modelo": "508 2.0 HDI Allure",
+    "kilometros": "130.855km",
+    "año": "Enero 2013",
+    "precio": "10.500€",
+    "motor": "Diesel",
+    "foto":"img/peugeot.jpg",
+    "disponible": "no"
+}]
