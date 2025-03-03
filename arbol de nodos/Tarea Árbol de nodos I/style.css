@@ -1,33 +1,159 @@
-body{
-    background-color: #F2A749;
+html, body {
+    min-height: 100vh;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    position: relative;
+    background-image: url("background.jpg");
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
     color: #333;
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    padding: 20px;
+    box-sizing: border-box;
 }
 
-.select{
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: left;
+body::before {
+    content: '';
+    position: fixed;
+    inset: 0;
+    background-color: rgba(255, 255, 255, 0.2);
+    z-index: -1;
 }
 
-h1{
+.menu-container {
+    max-width: 50%;
+    height: 100vh;
+    margin: 0 auto;
+    padding: 1rem;
+    display: grid;
+    grid-template-rows: auto 1fr 1fr 1fr auto auto;
+    gap: 1rem;
+}
+
+h1 {
     text-align: center;
-    background-color: #f5f5f557;
-    font-family: monospace;
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.4), rgba(255, 255, 255, 0.4));
+    font-family: 'Playfair Display', serif;
+    padding: 0.8rem;
+    border-radius: 15px;
+    margin-bottom: 1rem;
+    box-shadow: 0 8px 32px rgba(0,0,0,0.1);
+    backdrop-filter: blur(10px);
+    animation: slideDown 0.6s ease-out;
+    font-size: 1.5rem;
 }
 
-.imagen{
+.plato-card {
+    background: rgba(255, 255, 255, 0.47);
+    border-radius: 20px;
+    padding: 1rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+    align-items: center;
+    box-shadow: 0 8px 32px rgba(218, 204, 81, 0.47);
+    backdrop-filter: blur(10px);
+    transition: transform 0.3s ease;
+   min-height: 200px;
+    overflow: hidden;
+}
+
+.select {
     display: flex;
-    flex-wrap: wrap;
-    justify-content: right;
-}
-img{
-    width: 300px;
-    height: auto;
-    margin-top: 10px;
+    justify-content: left;
+    margin: 0;
 }
 
-#boton{
-    padding-left: 10%;
-    padding-right: 10%;
+.select select {
+    width: 100%;
+    background: rgba(255,255,255,0.95);
+    border: 2px solid #E67E22;
+    border-radius: 12px;
+    padding: 0.5rem 2rem 0.5rem 1rem;
+    font-size: 0.9rem;
+    color: #333;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 24 24' fill='none' stroke='%23E67E22' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M6 9l6 6 6-6'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: right 12px center;
+    appearance: none;
 }
+
+.select select:hover {
+    border-color: #F2A749;
+    box-shadow: 0 2px 8px rgba(242, 167, 73, 0.2);
+}
+
+.imagen {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    padding: 10px;
+}
+
+img {
+    width: 100%;
+    height: 100%;
+    border-radius: 10%;
+    max-width: 200px;
+    max-height: 150px;
+    object-fit: cover;
+    object-position: center;
+    transform-style: preserve-3d;
+    transition: transform 0.6s cubic-bezier(0.23, 1, 0.32, 1);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+img:hover {
+    transform: scale(1.05) rotateY(10deg) rotateX(5deg);
+}
+
+.descuento {
+    background: rgba(255,255,255,0.9);
+    padding: 0.8rem;
+    border-radius: 12px;
+    text-align: center;
+    margin: 0.5rem 0;
+    backdrop-filter: blur(5px);
+}
+
+#boton {
+    display: block;
+    width: 100%;
+    max-width: 300px;
+    margin: 0.5rem auto;
+    padding: 0.8rem 1.5rem;
+    background: linear-gradient(135deg, #E67E22, #F2A749);
+    color: white;
+    border: none;
+    border-radius: 12px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+#boton:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(230,126,34,0.3);
+}
+
+
+
+    .plato-card {
+        padding: 0.8rem;
+        min-height: 150px;
+    }
+
+    img {
+        max-width: 150px;
+        max-height: 120px;
+    }

@@ -6,51 +6,62 @@
     <title>Document</title>
     <script defer src="arbol.js"></script>
     <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
 </head>
 <body>
-    <h1>Opciones del menú del día:</h1>
-    
-    <div class="select">
-        <form action="">
-            <select name="primer_plato" id="primer_plato" required>
-                <option value="" selected disabled>Elegir primer plato</option>
-                <option value="3">Lentejas con chorizo (3€)</option>
-                <option value="2">Crema de calabaza (2€)</option>
-            </select>
-        </form>
-    </div>
-    <div class="imagen">
-        <img src="imagen inicial.jpg" alt="Plato y gorro chef con elementos de cocina" id="foto1">
-    </div>
-    <div class="select">
-        <form action="">
-            <select name="segundo_plato" id="segundo_plato" required>
-                <option value="" selected disabled>Elegir segundo plato</option>
-                <option value="4">Escalope de pollo (4€)</option>
-                <option value="5">Lubina al horno (5€)</option>
-            </select>
-        </form>
-    </div>
-    <div class="imagen">
-        <img src="imagen inicial.jpg" alt="Plato y gorro chef con elementos de cocina" id="foto2">
-    </div>
-    <div class="select">
-        <form action="">
-            <select name="postre" id="postre" required>
-                <option value="" selected disabled>Elegir postre</option>
-                <option value="1">Flan de huevo (1€)</option>
-                <option value="2">Arroz con leche (2€)</option>
-            </select>
-        </form>
-    </div>
-    <div class="imagen"> 
-        <img src="imagen inicial.jpg" alt="Plato y gorro chef con elementos de cocina" id="foto_postre">
-    </div>
-    <div class="descuento">
-        <input type="checkbox" id="descuento">
-        <label for="descuento">Consigue un 10% de descuento</label>
-    </div>
-    <div>
+    <div class="menu-container">
+        <h1>Menú del día</h1>
+        
+        <div class="plato-card">
+            <div class="select">
+                <form action="">
+                    <select name="primer_plato" id="primer_plato" required>
+                        <option value="" selected disabled>Elegir primer plato</option>
+                        <option value="3">Lentejas con chorizo (3€)</option>
+                        <option value="2">Crema de calabaza (2€)</option>
+                    </select>
+                </form>
+            </div>
+            <div class="imagen">
+                <img src="imagen inicial.jpg" alt="Primer plato" id="foto1">
+            </div>
+        </div>
+
+        <div class="plato-card">
+            <div class="select">
+                <form action="">
+                    <select name="segundo_plato" id="segundo_plato" required>
+                        <option value="" selected disabled>Elegir segundo plato</option>
+                        <option value="4">Escalope de pollo (4€)</option>
+                        <option value="5">Lubina al horno (5€)</option>
+                    </select>
+                </form>
+            </div>
+            <div class="imagen">
+                <img src="imagen inicial.jpg" alt="Segundo plato" id="foto2">
+            </div>
+        </div>
+
+        <div class="plato-card">
+            <div class="select">
+                <form action="">
+                    <select name="postre" id="postre" required>
+                        <option value="" selected disabled>Elegir postre</option>
+                        <option value="1">Flan de huevo (1€)</option>
+                        <option value="2">Arroz con leche (2€)</option>
+                    </select>
+                </form>
+            </div>
+            <div class="imagen">
+                <img src="imagen inicial.jpg" alt="Postre" id="foto_postre">
+            </div>
+        </div>
+
+        <div class="descuento">
+            <input type="checkbox" id="descuento">
+            <label for="descuento">¡Consigue un 10% de descuento!</label>
+        </div>
+
         <button id="boton">¡A comer!</button>
     </div>    
 </body>
