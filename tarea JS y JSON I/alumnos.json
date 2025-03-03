@@ -1,0 +1,44 @@
+[
+    {
+      "Nombre": "Juan",
+      "Apellidos": "Pérez García",
+      "Año_nacimiento": 2010,
+      "Curso": "3º ESO",
+      "imagen": "img/Juan.png"
+    },
+    {
+      "Nombre": "María",
+      "Apellidos": "López Rodríguez",
+      "Año_nacimiento": 2009,
+      "Curso": "4º ESO",
+      "imagen": "img/Maria.png"
+    },
+    {
+      "Nombre": "Carlos",
+      "Apellidos": "González Fernández",
+      "Año_nacimiento": 2011,
+      "Curso": "2º ESO",
+      "imagen": "img/Carlos.png"
+    },
+      {
+      "Nombre": "Ana",
+      "Apellidos": "Martínez Sánchez",
+      "Año_nacimiento": 2008,
+      "Curso": "1º Bachillerato",
+      "imagen": "img/Ana.png"
+    },
+    {
+      "Nombre": "Yoel",
+      "Apellidos": "Lou Rey",
+      "Año_nacimiento": 2018,
+      "Curso": "1º Primaria",
+      "imagen": "img/Yoel.png"
+    },
+    {
+      "Nombre": "Pedro",
+      "Apellidos": "Ruiz Díaz",
+      "Año_nacimiento": 2007,
+      "Curso": "2º Bachillerato",
+      "imagen": "img/Pedro.png"
+    }
+  ]

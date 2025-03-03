@@ -1,0 +1,103 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 20px;
+    min-height: 100vh;
+}
+
+.contenedor {
+    background: white;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+h1 {
+    color: #fff; 
+    font-size: 3rem; 
+    text-align: center;
+    text-shadow:
+        0 0 5px #03dac6, 
+        0 0 10px #03dac6, 
+        0 0 20px #03dac6, 
+        0 0 40px #03dac6; 
+}
+
+.tabla-alumnos {
+    display: flex;
+    flex-wrap: nowrap;
+    gap: 40px;
+    padding: 50px;
+    max-width: 100%;
+    margin: 0 auto;
+    justify-content: center;
+}
+
+.alumno {
+    background: linear-gradient(-45deg, #2b587649, #4e437641, #4568dc4d, #3f5efb4b);
+    border-radius: 12px;
+    padding: 30px;
+    margin: 10px;
+    box-shadow: 
+        rgba(0, 0, 0, 0.1) 0px 10px 15px -3px,
+        rgba(0, 0, 0, 0.05) 0px 4px 6px -2px,
+        inset 0 -2px 0 rgba(0,0,0,0.1),
+        inset 2px 0 0 rgba(255,255,255,0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    display: flex;
+    flex: 0 0 auto;
+    width: 300px;
+    align-items: center;
+}
+
+.alumno:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+}
+
+.alumno tr{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.celda-imagen {
+    text-align: center;
+    margin-bottom: 20px;
+    width: 100%;
+}
+
+.imagen-alumno {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    object-fit: cover;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border: 4px solid #fff;
+    transition: transform 0.3s ease;
+}
+
+.imagen-alumno:hover {
+    transform: scale(1.05);
+}
+
+.celda-datos {
+    text-align: center;
+    width: 100%;
+}
+
+.celda-datos p {
+    margin: 5px 0;
+    font-size: 0.9rem;
+    color: #34495e;
+    line-height: 1.4;
+}
+
+.celda-datos p strong {
+    color: #2c3e50;
+    font-weight: 600;
+}
+
