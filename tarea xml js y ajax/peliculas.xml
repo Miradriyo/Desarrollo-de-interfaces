@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<peliculas>
+    <pelicula id="p001">
+        <titulo>Oppenheimer</titulo>
+        <director>Christopher Nolan</director>
+        <duracion>180</duracion>
+        <nacionalidad>Estados Unidos</nacionalidad>
+        <actores>
+            <actor>Cillian Murphy</actor>
+            <actor>Emily Blunt</actor>
+            <actor>Robert Downey Jr.</actor>
+        </actores>
+        <genero>Drama histórico</genero>
+        <cartel ruta="img/oppenheimer.jpeg"/>
+        <sinopsis>La historia del físico J. Robert Oppenheimer y su papel como desarrollador de la bomba atómica durante la Segunda Guerra Mundial.</sinopsis>
+        <video>https://www.youtube.com/watch?v=uYPbbksJxIg</video>
+    </pelicula>
+    
+    <pelicula id="p002">
+        <titulo>Poor Things</titulo>
+        <director>Yorgos Lanthimos</director>
+        <duracion>141</duracion>
+        <nacionalidad>Reino Unido</nacionalidad>
+        <actores>
+            <actor>Emma Stone</actor>
+            <actor>Mark Ruffalo</actor>
+            <actor>Willem Dafoe</actor>
+        </actores>
+        <genero>Drama/Comedia negra</genero>
+        <cartel ruta="img/poor_things.jpg"/>
+        <sinopsis>Una joven revivida por un científico excéntrico se embarca en un viaje de autodescubrimiento y liberación en la era victoriana.</sinopsis>
+        <video>https://www.youtube.com/watch?v=RlbR5N6veqw</video>
+    </pelicula>
+
+    <pelicula id="p003">
+        <titulo>Killers of the Flower Moon</titulo>
+        <director>Martin Scorsese</director>
+        <duracion>206</duracion>
+        <nacionalidad>Estados Unidos</nacionalidad>
+        <actores>
+            <actor>Leonardo DiCaprio</actor>
+            <actor>Robert De Niro</actor>
+            <actor>Lily Gladstone</actor>
+        </actores>
+        <genero>Drama histórico</genero>
+        <cartel ruta="img/Killers_of_the_flower_moon.webp"/>
+        <sinopsis>Basada en hechos reales sobre los misteriosos asesinatos de miembros de la tribu Osage en Oklahoma durante los años 1920.</sinopsis>
+        <video>https://www.youtube.com/watch?v=7cx9nCHsemc</video>
+    </pelicula>
+    
+    <pelicula id="p004">
+        <titulo>The Zone of Interest</titulo>
+        <director>Jonathan Glazer</director>
+        <duracion>105</duracion>
+        <nacionalidad>Reino Unido, Polonia</nacionalidad>
+        <actores>
+            <actor>Christian Friedel</actor>
+            <actor>Sandra Hüller</actor>
+            <actor>Johann Karthaus</actor>
+        </actores>
+        <genero>Drama histórico</genero>
+        <cartel ruta="img/The_Zone_Of_Interest.jpg"/>
+        <sinopsis>La vida cotidiana del comandante de Auschwitz Rudolf Höss y su familia mientras intentan construir una vida idílica junto a un campo de concentración.</sinopsis>
+        <video>https://www.youtube.com/watch?v=1KXyXLLvszg</video>
+    </pelicula>
+</peliculas>
