@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <title>Actualizar Precio o Cantidad</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <div class="background-container"></div>
+    <div class="background-container2"></div>
+    <h1>Actualizar Precio o Cantidad de Producto</h1>
+    <form action="actualizar_precio_cantidad.php" method="post">
+        <label for="producto_id">Seleccionar Producto:</label>
+        <select id="producto_id" name="producto_id" required>
+            <option value="" disabled selected>Seleccionar Producto</option>
+            <?php include 'obtener_productos.php'; ?>
+        </select><br><br>
+
+        <label for="precio">Nuevo Precio (opcional):</label>
+        <input type="number" id="precio" name="precio" step="0.01"><br><br>
+
+        <label for="cantidad">Nueva Cantidad (opcional):</label>
+        <input type="number" id="cantidad" name="cantidad"><br><br>
+
+        <button type="submit">Actualizar Producto</button>
+    </form>
+    <div class="navigation">
+        <ul>
+            <li class="list">
+                <a href="añadir.html">
+                    <span class="icon"><img src="img/add.png" alt="Añadir" width="24" height="24"></span>
+                    <span class="text">Añadir</span>
+                </a>
+            </li>
+            <li class="list">
+                <a href="listar_productos.php">
+                    <span class="icon"><img src="img/list.png" alt="Lista" width="24" height="24"></span>
+                    <span class="text">Lista de productos</span>
+                </a>
+            </li>
+            <li class="list">
+                <a href="home.html">
+                    <span class="icon"><img src="img/home.png" alt="Añadir" width="24" height="24"></span>
+                    <span class="text">Home</span>
+                </a>
+            </li>
+            <li class="list">
+                <a href="#">
+                    <span class="icon"><img src="img/trash.png" alt="Eliminar" width="24" height="24"></span>
+                    <span class="text">Eliminar producto</span>
+                </a>
+            </li>
+            <div class="indicator"></div>
+        </ul>
+    </div>
+</body>
+</html>

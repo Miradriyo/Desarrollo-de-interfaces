@@ -1,0 +1,430 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+html, body {
+    height: 100%;
+    margin: 0;
+    /* Eliminamos overflow: hidden para permitir scroll */
+}
+
+body {
+    position: relative;
+    min-height: 100vh;
+}
+
+.background-container, .background-container2 {
+    position: fixed;
+    top: 0;
+    height: 100vh;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    z-index: -1;
+    animation: brilloSuave 8s infinite;
+    transition: opacity 0.5s ease-in-out;
+    opacity: 0.8; 
+}
+
+.background-container {
+    left: 0;
+    width: 50vw;      
+    background-image: url('img/background.jpg');
+    animation: fadeIn 2s ease-out, brilloSuave 8s infinite;
+}
+
+.background-container2 {
+    right: 0;        
+    width: 50vw;     
+    background-image: url('img/background2.jpg');
+    animation: fadeIn 2.5s ease-out, brilloSuave 8s infinite reverse;
+}
+
+.background-container3 {
+    position: fixed;
+    top: 0;
+    left: 0;        /* Cambiado de right a left */
+    width: 100vw;   /* Cambiado de 50vw a 100vw para cubrir toda la pantalla */
+    height: 100vh;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    z-index: -1;
+    background-image: url('img/background3.jpg');
+    animation: fadeIn 2.5s ease-out, brilloSuave 8s infinite;
+    opacity: 0.8;
+}
+
+@keyframes brilloSuave {
+    0%, 100% {
+        filter: brightness(1);
+    }
+    50% {
+        filter: brightness(1.1) contrast(1.1);
+    }
+}
+
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        filter: blur(5px);
+    }
+    to {
+        opacity: 1;
+        filter: blur(0);
+    }
+}
+
+.background-container::after,
+.background-container2::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(
+        45deg,
+        rgba(0,0,0,0.2) 0%,
+        rgba(255,255,255,0.1) 50%,
+        rgba(0,0,0,0.2) 100%
+    );
+    pointer-events: none;
+}
+
+.navigation {
+    position: fixed;
+    right: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 70px; 
+    height: 320px;
+    background: #cf377e79;
+    display: flex;
+    justify-content: center; 
+    align-items: center;
+    border-radius: 10px;
+}
+
+.navigation:has(li.active) {
+    width: 70px; 
+}
+
+.navigation ul {
+    display: flex;
+    flex-direction: column;
+    height: 280px;
+    width: 70px;
+}
+
+.navigation ul li {
+    position: relative;
+    list-style: none;
+    width: 70px;
+    height: 70px;
+    z-index: 1;
+}
+
+.navigation ul li a {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+    text-align: center;
+    font-weight: 500;
+    height: 70px; 
+    overflow: visible; 
+}
+
+.navigation ul li a .icon {
+    position: relative;
+    display: flex;           
+    justify-content: center; 
+    align-items: center;     
+    width: 70px;            
+    height: 70px;           
+    transition: 0.5s;
+    transform: translateX(0);
+}
+
+.navigation ul li.active a .icon {
+    transform: translateX(-68px); 
+}
+
+
+.navigation ul li a .icon img {
+    width: 24px;
+    height: 24px;
+    object-fit: contain;   
+    transition: 0.5s;
+}
+
+.navigation ul li a .text {
+    position: absolute;
+    color: blanchedalmond;
+    font-weight: 400;
+    font-size: 0.75em;
+    letter-spacing: 0.05em;
+    transition: 0.5s;
+    opacity: 0;
+    width: 70px; 
+    text-align: center;
+    right: 0; 
+    top: 50%;
+    transform: translateY(-50%);
+    white-space: normal;
+    word-break: break-word;
+    line-height: 1.2em; 
+    pointer-events: none; 
+}
+
+
+.navigation ul li.active a .text {
+    opacity: 1;
+    transform: translateY(-50%); 
+    right: 0; 
+}
+
+.indicator {
+    position: absolute;
+    left: -68px;
+    width: 70px;
+    height: 70px;
+    background: #fd29da;
+    border-radius: 50%;
+    border: 6px solid var(--clr);
+    transition: 0.5s;
+    opacity: 0;
+    visibility: hidden;
+}
+
+
+.navigation ul li.active ~ .indicator {
+    opacity: 1;
+    visibility: visible;
+}
+
+.indicator::before {
+    content: '';
+    position: absolute;
+    left: 35%;
+    top: -22px;
+    width: 20px;
+    height: 20px;
+    background: transparent;
+    border-top-right-radius: 20px;
+    box-shadow:  1px -10px 0 0 var(--clr);
+    transform: rotate(45deg);
+}
+
+.indicator::after {
+    content: '';
+    position: absolute;
+    left: 50%;
+    bottom: -22px;
+    width: 20px;
+    height: 20px;
+    background: transparent;
+    border-top-left-radius: 20px;
+    box-shadow:  -1px -10px 0 0 var(--clr);
+    transform: rotate(135deg);
+}
+
+.navigation ul li:nth-child(1).active ~ .indicator {
+    transform: translateY(calc(70px * 0));
+}
+
+.navigation ul li:nth-child(2).active ~ .indicator {
+    transform: translateY(calc(70px * 1));
+}
+
+.navigation ul li:nth-child(3).active ~ .indicator {
+    transform: translateY(calc(70px * 2));
+}
+
+.navigation ul li:nth-child(4).active ~ .indicator {
+    transform: translateY(calc(70px * 3));
+}
+
+/* Estilos para el formulario */
+form {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 400px;
+    padding: 30px;
+    background: rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(10px);
+    border-radius: 20px;
+    box-shadow: 0 8px 32px 0 rgba(184, 19, 134, 0.37);
+    border: 1px solid rgba(196, 7, 123, 0.18);
+}
+
+form label {
+    display: block;
+    margin-bottom: 8px;
+    color: #fff;
+    font-weight: 500;
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.1);
+}
+
+form input, form textarea, form select {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: none;
+    border-radius: 8px;
+    background: rgba(255, 255, 255, 0.2);
+    color: #000;    
+    backdrop-filter: blur(5px);
+}
+
+form input::placeholder, form textarea::placeholder {
+    color: rgba(214, 193, 210, 0.651);   
+}
+
+form button {
+    width: 100%;
+    padding: 12px;
+    border: none;
+    border-radius: 8px;
+    background: #fd29da;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+form button:hover {
+    background: #e624c2;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(253, 41, 218, 0.3);
+}
+
+form select option {
+    background: #ec92ce3a;
+    color: #000;    /* Cambiado de #fff a #000 */
+}
+
+form textarea {
+    min-height: 100px;
+    resize: vertical;
+}
+
+/* Estilos para la tabla de productos */
+h1 {
+    text-align: center;
+    color: #fff;
+    padding-top: 50px;
+    margin-bottom: 30px;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
+}
+
+.table-container {
+    position: relative;
+    width: 35%;          /* Reducido el ancho */
+    max-width: 500px;    /* Reducido el ancho máximo */
+    height: 70vh;
+    margin: 100px auto;
+    margin-right: 150px; /* Aumentado el margen derecho para alejarlo más del menú */
+    overflow-y: auto;
+    background: rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(10px);
+    border-radius: 20px;
+    box-shadow: 0 8px 32px 0 rgba(184, 19, 134, 0.37);
+    border: 1px solid rgba(196, 7, 123, 0.18);
+    padding: 20px;
+}
+
+/* Ajustar el ancho de las columnas para que sean más compactas */
+th:nth-child(1) { width: 30%; }  /* Nombre */
+th:nth-child(2) { width: 25%; }  /* Precio */
+th:nth-child(3) { width: 20%; }  /* Cantidad */
+th:nth-child(4) { width: 25%; }  /* Categoría */
+
+/* Ajustar el padding para que las celdas sean más compactas */
+th, td {
+    padding: 12px 15px;  /* Reducido el padding */
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+table {
+    width: 60%;
+    margin: 0 auto;    
+    border-collapse: collapse;
+    background: transparent;
+    table-layout: fixed;  /* Para control fijo del ancho de columnas */
+}
+
+
+th, td {
+    white-space: nowrap; /* Evita que el texto se rompa en múltiples líneas */
+}
+
+thead {
+    position: sticky;
+    top: 0;
+    background: rgba(253, 41, 218, 0.8);
+    z-index: 1;
+    width: 100%;
+}
+
+th {
+    color: #fff;
+    font-weight: 600;
+    padding: 15px;
+    text-align: left;
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.1);
+    border-bottom: 2px solid rgba(255, 255, 255, 0.3);
+    position: sticky;  /* Asegura que las cabeceras se mantengan visibles */
+    top: 0;
+}
+
+td {
+    padding: 15px;
+    color: #000;
+    background: rgba(255, 255, 255, 0.4);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+tr:hover td {
+    background: rgba(253, 41, 218, 0.2);
+    transition: all 0.3s ease;
+}
+
+tbody tr:nth-child(even) td {
+    background: rgba(255, 255, 255, 0.5);
+}
+
+tbody tr:nth-child(even):hover td {
+    background: rgba(253, 41, 218, 0.2);
+}
+
+/* Estilo para el scrollbar */
+.table-container::-webkit-scrollbar {
+    width: 8px;
+}
+
+.table-container::-webkit-scrollbar-track {
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 4px;
+}
+
+.table-container::-webkit-scrollbar-thumb {
+    background: rgba(253, 41, 218, 0.5);
+    border-radius: 4px;
+}
+
+.table-container::-webkit-scrollbar-thumb:hover {
+    background: rgba(253, 41, 218, 0.7);
+}
+

@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <title>Eliminar Producto</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script>
+        function confirmarEliminar() {
+            if (confirm("¿Está seguro de que quiere eliminar este producto?")) {
+                // Si el usuario confirma, el formulario se enviará
+                return true;
+            } else {
+                // Si el usuario cancela, redirigimos a home.html
+                window.location.href = 'home.html';
+                return false; // Evitar que el formulario se envíe
+            }
+        }
+    </script>
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <div class="background-container"></div>
+    <div class="background-container2"></div>
+    <h1>Eliminar Producto</h1>
+    <form action="eliminar_producto.php" method="post" onsubmit="return confirmarEliminar()">
+        <label for="producto_id">Seleccionar Producto:</label>
+        <select id="producto_id" name="producto_id" required>
+            <option value="" disabled selected>Seleccionar Producto</option>
+            <?php include 'obtener_productos.php'; ?>
+        </select><br><br>
+
+        <button type="submit">Eliminar Producto</button>
+    </form>
+    <div class="navigation">
+        <ul>
+            <li class="list">
+                <a href="añadir.html">
+                    <span class="icon"><img src="img/add.png" alt="Añadir" width="24" height="24"></span>
+                    <span class="text">Añadir</span>
+                </a>
+            </li>
+            <li class="list">
+                <a href="listar_productos.php">
+                    <span class="icon"><img src="img/list.png" alt="Lista" width="24" height="24"></span>
+                    <span class="text">Lista de productos</span>
+                </a>
+            </li>
+            <li class="list">
+                <a href="update.html">
+                    <span class="icon"><img src="img/update.png" alt="Actualizar" width="24" height="24"></span>
+                    <span class="text">Actualizar producto</span>
+                </a>
+            </li>
+            <li class="list">
+                <a href="home.html">
+                    <span class="icon"><img src="img/home.png" alt="Añadir" width="24" height="24"></span>
+                    <span class="text">Home</span>
+                </a>
+            </li>
+            <div class="indicator"></div>
+        </ul>
+    </div>
+            <div class="indicator"></div>
+        </ul>
+    </div>
+</body>
+</html>
